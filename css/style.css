@@ -1,0 +1,136 @@
+html{
+    font: 100%;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    background-color: aliceblue;
+    color: rgb(78, 78, 78);
+}
+select{
+    width: 100px;
+    height: auto;
+    align-self: center;
+    padding: 1rem .2rem;
+}
+.select-div{
+    margin-inline: .5rem;
+    text-align: center;
+}
+.sort-select-label{
+    display: block;
+}
+.container{
+    max-width: 800px;
+    margin-inline: auto;
+}
+.item-container{
+    min-height: 70vh;
+    display: flex;
+    transform: 2s all ease;
+}
+.item{
+    background-color: hsl(160, 100%, 75%);
+    flex: 1;
+    border: 1px solid rgb(54, 250, 185);
+    /* transition: 0.1s all ease; */
+}
+.item p{
+    text-align: center;
+}
+.btn{
+    padding: 1rem;
+    border: 1px solid hsl(180, 100%, 50%);
+    border: 0px;
+    display: inline-block;
+    margin-block: 1rem;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(252, 109, 109);
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: hsl(180, 100%, 20%);
+}
+.flex{
+    display: flex;
+}
+.range{
+    margin-left: 1rem;
+    align-items: center;
+    width: 100px;
+}
+.red-bg{
+    background-color: red;
+}
+/*RANGE STYLES*/
+/*removing the base browser specific styles*/
+input[type="range"]{
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    vertical-align: middle;
+}
+/*removing default focus state and hover state*/
+input[type="range"]:focus{
+    outline: none;
+}
+/*styling the slider track*/
+/*-webkit-slider-runnable-track for chrome, safari, opera and IE*/
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color: rgb(255, 197, 197);
+    height: .5rem;
+    border-radius: 5px;
+}
+/*-moz-range-track for mozilla firefox*/
+input[type="range"]::-moz-range-track{
+    background-color: rgb(255, 197, 197);
+    height: .5rem;
+    border-radius: 5px;
+}
+
+/*styling the thumb*/
+/* ::-webkit-slider-thumb for chrome, safari, opera and IE*/
+/* defaults */
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(252, 109, 109);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /*in order to center, we use a formular*/
+    /*margin-top: (track height px / 2) - (thumb height px / 2)*/
+    /*margin-top: (8px/2) - (30px/2) = -16px*/
+    margin-top: -8px;
+}
+/*Adding a focus state*/
+input[type="range"]:focus::-webkit-slider-thumb{
+    box-shadow: 0px 0px 20px var(--Slider-Backround);
+}
+/*Adding a hover state*/
+input[type="range"]:hover::-webkit-slider-thumb{
+    box-shadow: 0px 0px 20px var(--Slider-Backround);
+}
+
+/* ::-moz-range-thumb for mozilla firefox*/
+input[type="range"]::-moz-range-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(252, 109, 109);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /*in order to center, we use a formular*/
+    /*margin-top: (track height px / 2) - (thumb height px / 2)*/
+    /*margin-top: (8px/2) - (30px/2) = -16px*/
+    margin-top: -11px;
+    border: none;
+}
+/*Adding a focus state*/
+input[type="range"]:focus::-moz-range-thumb{
+    box-shadow: 0px 0px 20px var(--Slider-Backround);
+}
+/*Adding a hover state*/
+input[type="range"]:hover::-moz-range-thumb{
+    box-shadow: 0px 0px 20px var(--Slider-Backround);
+}
